@@ -1,0 +1,19 @@
+# Metszet: a két lista közös elemeit adjuk meg (beletesdzük egy 3. listába)
+from random import randint
+
+szamok1=[]
+szamok2=[]
+
+for i in range(100):
+    szamok1.append(randint(-100,100))
+    szamok2.append(randint(-100,100))
+print('Szamok 1: ',szamok1)
+print('Szamok 2: ',szamok2)
+
+#metszet
+metszet=[]
+for szam in szamok1: # végigmegyünk az első listán
+    if szam in szamok2: # megvizsgáljuk, hogy az első lista akt. eleme benne van-e a 2. listában
+        metszet.append(szam)# ha benne van, akkor mehet a metszetbe
+print('Metszet ',metszet)
+

@@ -1,0 +1,19 @@
+from random import randint
+
+feldaobasok_szama=int(input('Hány alakalomman legyen feldobás? '))
+
+anni_nyert=0 #kezdetben 0 az érték, majd ha nyer, akkor növeljük
+
+for i in range(feldaobasok_szama):
+    dobas1=randint(1,6)
+    dobas2=randint(1,6)
+    dobas3=randint(1,6)
+    osszeg=dobas1+dobas2+dobas3 
+    print(f'Dobás: {dobas1} + {dobas2} + {dobas3} = {osszeg}',end=' ')  
+    if int (osszeg)<10:
+        print('Nyert: Panni') 
+    else:
+        print('Nyert: Anni')
+        anni_nyert+=1
+
+print(f'A játék során {anni_nyert} alkalommal Anni, {feldaobasok_szama-anni_nyert} alkaommal Panni nyert.')            
